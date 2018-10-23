@@ -1,0 +1,17 @@
+Create immutable class in java
+https://www.journaldev.com/129/how-to-create-immutable-class-in-java
+
+Why String is immutable?
+When we create a string in java like String s1="hello"; then an object will be created in string pool(hello) and s1 will be pointing to hello.Now if again we do String s2="hello"; then another object will not be created but s2 will point to hello because JVM will first check if the same object is present in string pool or not.If not present then only a new one is created else not.
+
+String Constant Pool ... If string is mutable, changing the string with one reference will lead to the wrong value for the other references.
+
+let's say s1 = "hello" and s2 ="hello"; if s1==s2, yes it will be true.
+later, if s2 = "hello-world"; if s1==s2, it will be false
+now, lets say like s3=s1, now, if s1==s3, yes it will be true.
+later, if s3 ="modified"; if s1==s3, it will not be true. Thats the importance of immutable.
+If it is mutable, then its reference will be pointed to another variable, later, if we change that variable, through by its reference its original state will be changed
+To avoid this, strings are made immutable.
+
+Please find the code here for creating immutable class in java
+https://www.journaldev.com/129/how-to-create-immutable-class-in-java
